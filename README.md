@@ -9,7 +9,9 @@ In this project, we’ll be building up on the IoT Core and DynamoDB lab. The de
 
 >Housekeeping points
 ● This is a simple example and may not follow some standard practices.
+
 ● The focus is on the main flow, and not as much on error handling.
+
 ● There will be some differences from standard flow since we are mimicking ‘continuous monitoring by an always-on service’ with a manually triggered program.
 
 
@@ -41,42 +43,49 @@ your main code file. You need to do the following:
 ### Total Project Points: 240 
 
 ● Basic compilation without errors (10%) : 24 Points
+
 ● Correctness:
 #### Correctness of implementation
 
 ■ Problem statement - point 1 (40%) : 96 Points
+
 ■ Problem statement - point 2.a (10%) : 24 Points
+
 ■ Problem statement - point 2.b (30%) : 72 Points
+
 ■ Problem statement - point 3.a (5%) : 12 Points
+
 ■ Problem statement - point 3.b (5%) : 12 Points
 
->**Note:**
+
+### **Note:**
+
 ● **Minimum Requirements:** The final submission that you upload needs to have a successful compilation, at the least.
+
 ○ The basic code that will mimic the BedsideMonitor data is already provided in the attached folder.
+
 ○ You are supposed to write and submit code that should perform aggregation and anomaly on the raw data that was generated. As part of the submission you are also supposed to write certain JSON based rules that will determine if
 the data should be considered as anomaly/alert or not.
+
 ○ Submitted files should have implementation pertaining to aggregation and
 anomaly detection on the recorded raw_data. Ideally you should create
 different python files for different tasks.
+
 ● **Expected Submission Files:**
-○ [RawDataModel.py](RawDataModel.py): This file will process the raw data that was created and
-pushed in the bsm_raw_data table by BedSideMonitor.py.
-○ AggregateModel.py: This file will have implementation related to the
-aggregation on the raw data
-○ Database.py: This is a class that will invoke and call the various databases
-and methods to fetch and store the data in the bsm_agg_data table.
-○ AlertDataModel.py: This is a file that will access the created rules and will
-detect the anomaly values based on the parsed rule. The detected output will
-then be pushed in the bsm_alerts
-○ Main.py: This will be the driver code that should be invoked to perform the
-aggregation operation and alert operation on the inserted data that is
-available in the raw form in one of the tables.
-○ BedSideMonitor.py: The modified or newly created data publisher should
-also be present in the zipped folder along with other files.
-○ C04P01-IoT-HealthCare-Cloud-Workbook.pdf: Attach all the screenshots at
-the mentioned placeholders. Follow the instructions mentioned in the
-workbook while attaching the screenshot. You should submit this file in PDF
-version only.
+
+○ [RawDataModel.py](RawDataModel.py): This file will process the raw data that was created and pushed in the bsm_raw_data table by BedSideMonitor.py.
+
+○ AggregateModel.py: This file will have implementation related to the aggregation on the raw data.
+
+○ Database.py: This is a class that will invoke and call the various databases and methods to fetch and store the data in the **bsm_agg_data** table.
+
+○ AlertDataModel.py: This is a file that will access the created rules and will detect the anomaly values based on the parsed ule. The detected output will then be pushed in the bsm_alerts.
+
+○ Main.py: This will be the driver code that should be invoked to perform the aggregation operation and alert operation on the nserted data that is available in the raw form in one of the tables. 
+
+○ BedSideMonitor.py: The modified or newly created data publisher should also be present in the zipped folder along with other files.
+
+○ C04P01-IoT-HealthCare-Cloud-Workbook.pdf: Attach all the screenshots at the mentioned placeholders. Follow the instructions entioned in the workbook while attaching the screenshot. You should submit this file in PDF version only.
 
 
 ## Program Instructions
