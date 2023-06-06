@@ -27,11 +27,11 @@ There are three top-level tasks in this project. The device simulator code can p
 an IoT core endpoint. Please demonstrate functioning of tasks 2 and 3 with example calls in
 your main code file. You need to do the following:
 
-1. **(Easy)** Similar to the lab, create Things, Certificates, Policy, DynamoDB table **(bsm_data)** and IoT Core Rule to push the data created to the DynamoDB table. The simulator code is similar to the lab’s simulator. You should create at least two devices/things. You can modify the simulator code to take deviceid as another parameter or run two copies in parallel with different hard-coded device ids. Please run them for at least an hour continuously to generate enough data. The data is being generated at 1, 10, and 15 second frequencies for the three different sensor types.
+1. **(Easy)** Similar to the lab, create Things, Certificates, Policy, DynamoDB table **(bsm_data)** and IoT Core Rule to push the data created to the DynamoDB table. You should create at least two devices/things. You can modify the simulator code to take deviceid as another parameter or run two copies in parallel with different hard-coded device ids. Please run them for at least an hour continuously to generate enough data. The data is being generated at 1, 10, and 15 second frequencies for the three different sensor types.
 
 2. **(Medium)** Aggregate the data in another table 
    
-   a. Create a new table **(bsm_agg_data)** using code or manually via the UI. Create model and database classes to access **DynamoDB**, similar to the previous project.
+   a. Create a new table **(bsm_agg_data)** using code or manually via the UI. Create model and database classes to access **DynamoDB**.
 
    b. Provide functionality to aggregate the data from the three sensors individually, at the minute level. You should calculate and store the average, minimum and maximum values taking all values within a minute in account. Since we are only mimicking a continuous monitoring system, please provide the aggregator method call to be for a specific time range and aggregate data per minute within that range. This should be stored programmatically in the aggregator table. For example, when called with a time range of ‘2021-02-17 13:00:00 to 2021-02-17 14:00:00’, it should create 60 rows per sensor type in the aggregated table, each being the aggregation of all values within a minute for that sensor data type. Entries can be skipped if there is no relevant data.
 
