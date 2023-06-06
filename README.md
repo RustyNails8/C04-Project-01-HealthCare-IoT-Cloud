@@ -7,7 +7,8 @@
 
 In this project, we’ll be building up on the IoT Core and DynamoDB lab. The device simulator will publish Heart Rate, SpO2 (Oxygen Saturation) and Body Temperature values periodically. You’ll need to channel that to the cloud (Iot Core → DynamoDB), and then aggregate data and detect anomalies.
 
->Housekeeping points
+### Housekeeping points
+
 ● This is a simple example and may not follow some standard practices.
 
 ● The focus is on the main flow, and not as much on error handling.
@@ -17,7 +18,7 @@ In this project, we’ll be building up on the IoT Core and DynamoDB lab. The de
 
 ## Program Organization
 
-1. BedSideMonitor.py - This is quite similar to the device simulator in IoT Core and DynamoDB lab.
+1. [BedSideMonitor.py](BedSideMonitor.py) - This is quite similar to the device simulator in IoT Core and DynamoDB lab.
 2. The complete post-processing code needs to be built up. The basics will be similar to the model and database class layers from one of the previous projects.
 
 ## Problem Statement
@@ -73,19 +74,19 @@ different python files for different tasks.
 
 ● **Expected Submission Files:**
 
-○ [RawDataModel.py](RawDataModel.py): This file will process the raw data that was created and pushed in the bsm_raw_data table by BedSideMonitor.py.
+○ [RawDataModel.py](RawDataModel.py): This file will process the raw data that was created and pushed in the bsm_raw_data table by [BedSideMonitor.py](BedSideMonitor.py).
 
-○ AggregateModel.py: This file will have implementation related to the aggregation on the raw data.
+○ [AggregateModel.py](AggregateModel.py): This file will have implementation related to the aggregation on the raw data.
 
-○ Database.py: This is a class that will invoke and call the various databases and methods to fetch and store the data in the **bsm_agg_data** table.
+○ [Database.py](Database.py): This is a class that will invoke and call the various databases and methods to fetch and store the data in the **bsm_agg_data** table.
 
-○ AlertDataModel.py: This is a file that will access the created rules and will detect the anomaly values based on the parsed ule. The detected output will then be pushed in the bsm_alerts.
+○ [AlertDataModel.py](AlertDataModel.py): This is a file that will access the created rules and will detect the anomaly values based on the parsed ule. The detected output will then be pushed in the bsm_alerts.
 
-○ Main.py: This will be the driver code that should be invoked to perform the aggregation operation and alert operation on the nserted data that is available in the raw form in one of the tables. 
+○ [Main.py](Main.py): This will be the driver code that should be invoked to perform the aggregation operation and alert operation on the nserted data that is available in the raw form in one of the tables. 
 
-○ BedSideMonitor.py: The modified or newly created data publisher should also be present in the zipped folder along with other files.
+○ [BedSideMonitor.py](BedSideMonitor.py): The modified or newly created data publisher should also be present in the zipped folder along with other files.
 
-○ C04P01-IoT-HealthCare-Cloud-Workbook.pdf: Attach all the screenshots at the mentioned placeholders. Follow the instructions entioned in the workbook while attaching the screenshot. You should submit this file in PDF version only.
+○ [C04P01-IoT-HealthCare-Cloud-Workbook.pdf](C04P01-IoT-HealthCare-Cloud-Workbook.pdf): Attach all the screenshots at the mentioned placeholders. Follow the instructions entioned in the workbook while attaching the screenshot. You should submit this file in PDF version only.
 
 
 ## Program Instructions
