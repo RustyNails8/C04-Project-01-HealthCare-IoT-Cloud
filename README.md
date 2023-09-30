@@ -86,6 +86,11 @@ different python files for different tasks.
 
 ○ [BedSideMonitor.py](BedSideMonitor.py): The modified or newly created data publisher should also be present in the zipped folder along with other files.
 
+Syntax:
+```bash
+./BedSideMonitor.py -e $IoT_EP -r rootCA.crt -c ${device}_pub_cert.crt -k ${device}_private.key -p 8883 -w true -t temperatureTopic -M ${uuid}
+```
+
 ○ [C04P01-IoT-HealthCare-Cloud-Workbook.pdf](C04P01-IoT-HealthCare-Cloud-Workbook.pdf): Attach all the screenshots at the mentioned placeholders. Follow the instructions entioned in the workbook while attaching the screenshot. You should submit this file in PDF version only.
 
 

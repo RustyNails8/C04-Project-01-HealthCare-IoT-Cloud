@@ -1,0 +1,54 @@
+{
+    "publish": {
+        "deviceid": "BSM_G101",
+        "timestamp": "2023-09-29T15:03:51Z",
+        "datatype": "SPO2",
+        "value": 80
+    },
+    "bsm_data": {
+        "deviceid": {
+            "S": "BSM_G101"
+        },
+        "timestamp": {
+            "S": "2023-09-29 15:13:01Z"
+        },
+        "datatype": {
+            "S": "HeartRate"
+        },
+        "value": {
+            "N": "79"
+        },
+        "time": {
+            "S": "2023-09-29 15:13:01Z"
+        },
+        "temperature": {
+            "S": "36.5"
+        }
+    },
+    "bsm_agg_data": {
+        "deviceid-ruleid": {
+            "S": "BSM_G101-Rule_101"
+        },
+        "timestamp": {
+            "S": "2023-09-29 15:13:01Z"
+        },
+        "breach_type": {
+            "S": "min"
+        },
+        "avg": {
+            "N": "80.5"
+        },
+        "deviceid": {
+            "S": "BSM_G101"
+        },
+        "ruleid": {
+            "S": "Rule_101"
+        },
+        "time": {
+            "S": "2023-09-29 15:13:01Z"
+        },
+        "temperature": {
+            "S": "36.5"
+        }
+    }
+}
